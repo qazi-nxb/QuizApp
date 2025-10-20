@@ -27,7 +27,8 @@ export default function Answer({answersList, selectedAnswer, answerState, onSele
                 return (
                     <li key={answer} className="answer">
                         <button onClick={() => onSelect(answer)}
-                            className={cssClass}>
+                            className={cssClass}
+                            disabled={answerState !== ''}>
                             {answer}
                         </button>
                     </li>
